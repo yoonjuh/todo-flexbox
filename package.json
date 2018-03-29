@@ -1,0 +1,36 @@
+{
+  "name": "sass-flexbox",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "concat": "^1.0.3",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-html": "^4.0.2",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.7.0",
+    "node-sass": "^4.5.3",
+    "npm-run-all": "^4.1.1",
+    "postcss-cli": "^4.1.1",
+    "prettier": "^1.11.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "watch:sass": "node-sass src/sass/main.scss src/css/style.css -w",
+    "devserver": "live-server",
+    "compile:sass": "node-sass src/sass/main.scss src/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
+  }
+}

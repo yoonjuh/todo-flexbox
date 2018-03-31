@@ -10,6 +10,11 @@
     height: 7rem; //the height of header container
     background-color: #fff; //background
     border-bottom: var(--color--Grey-light-2); //second background-color,
+    display: flex;
+    justify-content: space-between;
+    /*justify-content is to set horizontal position*/
+    align-items: center;
+    /*align-items attribute is to set verticle position*/
 }
 
 .content {

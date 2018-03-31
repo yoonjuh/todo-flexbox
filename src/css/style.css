@@ -64,7 +64,12 @@ body {
 .header {
   height: 7rem;
   background-color: #fff;
-  border-bottom: var(--color--Grey-light-2); }
+  border-bottom: var(--color--Grey-light-2);
+  display: flex;
+  justify-content: space-between;
+  /*justify-content is to set horizontal position*/
+  align-items: center;
+  /*align-items attribute is to set verticle position*/ }
 
 .content {
   display: flex;
@@ -90,17 +95,52 @@ body {
     as it possibly can.
     */ }
 
+/*
+When you have to down size a component,
+you can simply limited its height and width
+*/
 .logo {
-  height: 3.25rem; }
+  height: 3.25rem;
+  margin-left: 3rem; }
 
-.search__icon {
-  height: 2rem;
-  width: 2rem; }
+.search {
+  background-color: orangered;
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center; }
+  .search__input {
+    font-family: inhreit;
+    /*input tag will now auto matically inherit from the container
+        so we nned to set it manully*/
+    font-size: inherit;
+    color: inherit;
+    background-color: var(--color-Grey-light-2);
+    border: none;
+    padding: .7rem 2rem;
+    border-radius: 100px;
+    width: 90%;
+    transition: all .2s;
+    margin-right: -3.25rem; }
+    .search__input:focus {
+      outline: none;
+      width: 100%;
+      background-color: var(--color-Grey-light-3); }
+  .search__button {
+    border: none;
+    background-color: var(--color-Grey-light-2); }
+    .search__button:focus {
+      outline: none; }
+    .search__button:active {
+      transform: translateY(2px); }
+  .search__icon {
+    height: 2rem;
+    width: 2rem; }
 
-.user-nav__icon {
-  height: 2.25rem;
-  width: 2.25rem; }
-
-.user-nav__user-photo {
-  height: 3.75rem;
-  border-radius: 50%; }
+.user-nav {
+  background-color: yellowgreen; }
+  .user-nav__icon {
+    height: 2.25rem;
+    width: 2.25rem; }
+  .user-nav__user-photo {
+    height: 3.75rem;
+    border-radius: 50%; }

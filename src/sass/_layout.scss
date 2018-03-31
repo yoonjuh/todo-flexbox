@@ -1,0 +1,37 @@
+.container {
+    max-width: 120rem; // if we don;t have enough space It will stretch until its max value
+    margin: 8rem auto; //simple tric, i will enable us to put the main content in the middle
+    background-color: var(--color-Grey-light-1); //The first background color setting
+    box-shadow: 0 2rem 6rem rgba(0, 0, 0, .3); //box-shadow for main container
+    min-height: 50rem;
+}
+
+.header {
+    height: 7rem; //the height of header container
+    background-color: #fff; //background
+    border-bottom: var(--color--Grey-light-2); //second background-color,
+}
+
+.content {
+    display: flex;
+    /*
+    Because I set this flex display,
+    the div tags with className sideBar and hotel-view will
+    be the flexbox item
+    */
+}
+
+.sidebar {
+    background-color: var(--color-Grey-dark-1); //The Third background color;
+    flex: 0 0 18%;
+    /*The first 0 is for flex-grow,
+        teh second 0 is for flex-shrink
+        the 18% is for flex-basis;
+    */
+}
+
+.hotel-view {
+    background-color: #fff;
+    background-color: orangered;
+    flex: 1;
+}

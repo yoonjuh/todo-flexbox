@@ -16,6 +16,9 @@ Grey dark 3: #999
 
 */
 :root {
+  /*This is the CSS variable section,
+    We can put colors and others in this :root selector
+    */
   --color-primary: #eb2f64;
   --color-primary-light: #FF3366;
   --color-primary-dark: #BA265D;
@@ -25,7 +28,8 @@ Grey dark 3: #999
   --color-Grey-light-4: #ccc;
   --color-Grey-dark-1: #333;
   --color-Grey-dark-2: #777;
-  --color-Grey-dark-3: #999; }
+  --color-Grey-dark-3: #999;
+  --box-shadow: 0 2rem 6rem rgba(0, 0, 0, .3); }
 
 * {
   margin: 0;
@@ -49,3 +53,36 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh; }
+
+.container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: var(--color-Grey-light-1);
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  min-height: 50rem; }
+
+.header {
+  height: 7rem;
+  background-color: #fff;
+  border-bottom: var(--color--Grey-light-2); }
+
+.content {
+  display: flex;
+  /*
+    Because I set this flex display,
+    the div tags with className sideBar and hotel-view will
+    be the flexbox item
+    */ }
+
+.sidebar {
+  background-color: var(--color-Grey-dark-1);
+  flex: 0 0 18%;
+  /*The first 0 is for flex-grow,
+        teh second 0 is for flex-shrink
+        the 18% is for flex-basis;
+    */ }
+
+.hotel-view {
+  background-color: #fff;
+  background-color: orangered;
+  flex: 1; }

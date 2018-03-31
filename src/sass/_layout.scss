@@ -32,6 +32,9 @@
 
 .hotel-view {
     background-color: #fff;
-    background-color: orangered;
+    background-color: orangered; // This is only for visual purpose temporarily
     flex: 1;
+    /* This allow this hotel-view container to stretch as mush
+    as it possibly can.
+    */
 }

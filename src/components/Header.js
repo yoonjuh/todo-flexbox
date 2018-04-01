@@ -19,7 +19,7 @@ const Header = () => (
       </div>
       <div className="user-nav__icon-box">
         <Icon className="user-nav__icon" icon="icon-chat" />
-        <span className="user-nav__notificatioon">13</span>
+        <span className="user-nav__notification">13</span>
       </div>
       <div className="user-nav__user">
         <img src={UserPic} alt="User photo" className="user-nav__user-photo" />

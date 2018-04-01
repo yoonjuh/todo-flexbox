@@ -62,6 +62,7 @@ body {
   min-height: 50rem; }
 
 .header {
+  font-size: 1.4rem;
   height: 7rem;
   background-color: #fff;
   border-bottom: var(--color--Grey-light-2);
@@ -101,15 +102,15 @@ you can simply limited its height and width
 */
 .logo {
   height: 3.25rem;
-  margin-left: 3rem; }
+  margin-left: 2rem; }
 
 .search {
-  background-color: orangered;
   flex: 0 0 40%;
   display: flex;
+  align-items: center;
   justify-content: center; }
   .search__input {
-    font-family: inhreit;
+    font-family: inherit;
     /*input tag will now auto matically inherit from the container
         so we nned to set it manully*/
     font-size: inherit;
@@ -125,6 +126,11 @@ you can simply limited its height and width
       outline: none;
       width: 100%;
       background-color: var(--color-Grey-light-3); }
+    .search__input::-webkit-input-placeholder {
+      font-weight: 100;
+      color: var(--color-Grey-light-4); }
+  .search__input:focus + .search__button {
+    background-color: var(--color-Grey-light-3); }
   .search__button {
     border: none;
     background-color: var(--color-Grey-light-2); }
@@ -134,13 +140,41 @@ you can simply limited its height and width
       transform: translateY(2px); }
   .search__icon {
     height: 2rem;
-    width: 2rem; }
+    width: 2rem;
+    fill: var(--color-Grey-dark-3); }
 
 .user-nav {
-  background-color: yellowgreen; }
+  align-self: stretch;
+  display: flex;
+  align-items: center; }
+  .user-nav > * {
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center; }
+  .user-nav > *:hover {
+    background-color: var(--color-Grey-light-2); }
+  .user-nav__icon-box {
+    position: relative; }
   .user-nav__icon {
     height: 2.25rem;
-    width: 2.25rem; }
+    width: 2.25rem;
+    fill: var(--color-Grey-dark-2); }
+  .user-nav__notification {
+    font-size: .8rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 100px;
+    background-color: var(--color-primary);
+    color: #fff;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
   .user-nav__user-photo {
     height: 3.75rem;
-    border-radius: 50%; }
+    border-radius: 50%;
+    margin-right: 1rem; }

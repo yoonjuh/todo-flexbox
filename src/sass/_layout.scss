@@ -34,6 +34,9 @@
         teh second 0 is for flex-shrink
         the 18% is for flex-basis;
     */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hotel-view {
@@ -43,4 +46,5 @@
     /* This allow this hotel-view container to stretch as mush
     as it possibly can.
     */
+    height: 80rem; // this is only for test purpose, remove this later
 }

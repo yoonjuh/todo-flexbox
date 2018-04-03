@@ -86,7 +86,10 @@ body {
   /*The first 0 is for flex-grow,
         teh second 0 is for flex-shrink
         the 18% is for flex-basis;
-    */ }
+    */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
 
 .hotel-view {
   background-color: #fff;
@@ -94,7 +97,8 @@ body {
   flex: 1;
   /* This allow this hotel-view container to stretch as mush
     as it possibly can.
-    */ }
+    */
+  height: 80rem; }
 
 /*
 When you have to down size a component,
@@ -120,7 +124,7 @@ you can simply limited its height and width
     padding: .7rem 2rem;
     border-radius: 100px;
     width: 90%;
-    transition: all .2s;
+    transition: all .3s;
     margin-right: -3.25rem; }
     .search__input:focus {
       outline: none;
@@ -178,3 +182,13 @@ you can simply limited its height and width
     height: 3.75rem;
     border-radius: 50%;
     margin-right: 1rem; }
+
+.side-nav__icon {
+  width: 1.75rem;
+  height: 1.75rem; }
+
+.legal {
+  font-size: 1.2rem;
+  color: var(--color-Grey-light-4);
+  text-align: center;
+  padding: 2.5rem; }

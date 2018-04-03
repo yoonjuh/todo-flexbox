@@ -23,6 +23,9 @@ class SideBar extends Component {
       },
     ],
   };
+  onClick = e => {
+    console.log(e.target.value);
+  };
 
   renderList = () => {
     const { sections } = this.state;

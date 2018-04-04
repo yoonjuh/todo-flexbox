@@ -93,7 +93,6 @@ body {
 
 .hotel-view {
   background-color: #fff;
-  background-color: orangered;
   flex: 1;
   /* This allow this hotel-view container to stretch as mush
     as it possibly can.
@@ -228,3 +227,12 @@ you can simply limited its height and width
   color: var(--color-Grey-light-4);
   text-align: center;
   padding: 2.5rem; }
+
+.gallery {
+  display: flex; }
+  .gallery__photo {
+    width: 100%;
+    display: block;
+    /* display: blcok is to remove the a bit of space
+        between photos. when images are inline element it automatically will have a little space on the bottom
+        */ }

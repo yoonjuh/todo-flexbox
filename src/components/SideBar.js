@@ -22,17 +22,19 @@ class SideBar extends Component {
         icon: 'icon-map',
       },
     ],
+    // activeClass: '',
+    // selectedKey: '',
   };
-  onClick = e => {
-    console.log(e.target.value);
-  };
+  // onClick = e => {
+  // e.target.className = 'side-nav__item--active';
+  // };
 
   renderList = () => {
     const { sections } = this.state;
-    return sections.map(({ name, icon }) => (
+    return sections.map(({ name, icon }, i) => (
       // const { name, icon } = section;
       <div key={name}>
-        <SideItems section={name} icon={icon} />
+        <SideItems index={i} section={name} icon={icon} />
       </div>
     ));
   };
@@ -40,7 +42,12 @@ class SideBar extends Component {
   render() {
     return (
       <nav className="sidebar">
-        <ul className="side-nav">{this.renderList()}</ul>
+        <ul className="side-nav">
+          {/* {Object.keys(this.state.sections).map(key => (
+              <SideItems sections={this.state.sections[key]} key={key} index={key} />
+          ))} */}
+          {this.renderList()}
+        </ul>
         <div className="legal">&copy; 2018 by trillo. All rights reserved;</div>
       </nav>
     );

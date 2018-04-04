@@ -10,7 +10,9 @@ class App extends Component {
         <Header />
         <div className="content">
           <SideBar />
-          <Main />
+          <div className="hotel-view">
+            <Main />
+          </div>
         </div>
       </div>
     );

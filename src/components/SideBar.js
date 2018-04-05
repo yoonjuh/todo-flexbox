@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Icon from './icon';
 import SideItems from './SideItems';
 
 class SideBar extends Component {

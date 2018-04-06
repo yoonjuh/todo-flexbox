@@ -10,7 +10,7 @@
     font-size: 1.4rem;
     height: 7rem; //the height of header container
     background-color: #fff; //background
-    border-bottom: var(--color--Grey-light-2); //second background-color,
+    border-bottom: 1px solid var(--color--Grey-light-2); //second background-color,
     display: flex;
     justify-content: space-between;
     /*justify-content is to set horizontal position*/
@@ -40,8 +40,7 @@
 }
 
 .hotel-view {
-    background-color: #fff;
-    background-color: orangered; // This is only for visual purpose temporarily
+    background-color: #fff; // background-color: orangered; // This is only for visual purpose temporarily
     flex: 1;
     /* This allow this hotel-view container to stretch as mush
     as it possibly can.
